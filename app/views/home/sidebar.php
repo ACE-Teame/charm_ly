@@ -15,8 +15,8 @@
 </div>
 <div class="slide-left">
 	<ul>
-		<li id="index" ><a href="<?php echo base_url() ?>"><i class="iconfont icon-home"></i>最新产品</a></li>
-		<li id="contact"><a href="<?php echo base_url('index/board') ?>"><i class="iconfont icon-msg"></i>留言版</a></li>
+		<li id="index" class="active"><a href="<?php echo base_url() ?>"><i class="iconfont icon-home"></i>最新产品</a></li>
+		<li id="board"><a href="<?php echo base_url('index/board') ?>"><i class="iconfont icon-msg"></i>留言版</a></li>
 	</ul>
 </div>
 <div class="bg"></div>

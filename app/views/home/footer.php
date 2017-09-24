@@ -15,20 +15,14 @@
 
 		    var str = window.location.pathname;
             var positions = new Array();
-            var pos = str.indexOf("/");
-            while (pos > -1) {
-                positions.push(pos);
-                pos = str.indexOf("/", pos + 1);
-            }        
-            var i = positions[0];
-            var j = positions[1];
-
-            var ret = str.substring(j+1, str.length);
-            var result = ret.indexOf(".");
-            var result = ret.substring(0, result);
+            var pos = str.lastIndexOf("/");
+            var ret = str.substring(pos+1, str.length);
+            console.log(ret);
+            if(ret){
+                $('#index').removeClass('active');
+                $('#' + ret).addClass('active');
+            }
             
-            $('#' + result).addClass('active');
-
 		});
     })(jQuery);
 

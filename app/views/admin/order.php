@@ -18,6 +18,18 @@
                         <input type="text" name="username" placeholder="">
                     </div>
                     <div class="entry">
+                        <label>地址:</label>
+                        <input type="text" name="address" placeholder="">
+                    </div>
+                    <div class="entry">
+                        <label>手机号:</label>
+                        <input type="text" name="phone" placeholder="">
+                    </div>
+                    <div class="entry">
+                        <label>微信/QQ:</label>
+                        <input type="text" name="contact" placeholder="">
+                    </div>
+                    <div class="entry">
                         <label>时间段:</label>
                         <input type="text" name="start_date" id="start_date" placeholder="" onclick="WdatePicker()"> - 
                         <input type="text" name="end_date" id="end_date" placeholder="" onclick="WdatePicker()">
@@ -32,9 +44,9 @@
                                 <th><input type="checkbox" name="" id="chkall"></th>
                                 <th>序号</th>
                                 <th>用户名</th>
-                                <th>电话</th>
+                                <th>手机号</th>
                                 <th>地址</th>
-                                <th>联系方式</th>
+                                <th>微信/QQ</th>
                                 <th>提交时间</th>
                                 <th>IP</th>
                             </tr>

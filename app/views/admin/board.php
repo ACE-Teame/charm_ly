@@ -10,11 +10,23 @@
                 <a href="javascript:location.reload();" class="btn reflash">刷新</a>
             </div>
 
-            <div class="search">
+            <div class="search clear">
                 <form action="<?php echo base_url('board');?>" class="searchForm" method="GET" name="search">
                     <div class="entry">
                         <label>用户名:</label>
                         <input type="text" name="username" placeholder="">
+                    </div>
+                    <div class="entry">
+                        <label>邮箱:</label>
+                        <input type="text" name="email" placeholder="">
+                    </div>
+                    <div class="entry">
+                        <label>手机号:</label>
+                        <input type="text" name="phone" placeholder="">
+                    </div>
+                    <div class="entry">
+                        <!-- <label>邮箱:</label>
+                        <input type="text" name="email" placeholder=""> -->
                     </div>
                     <div class="entry">
                         <label>时间段:</label>
@@ -37,7 +49,6 @@
                                 <th>留言内容</th>
                                 <th>ip</th>
                                 <th>留言时间</th>
-                                <th>操作</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,9 +62,6 @@
                                     <td><?php echo $board['contect'] ?></td>
                                     <td><?php echo $board['ip'] ?></td>
                                     <td><?php echo get_date($board['time']) ?></td>
-                                    <td>
-                                        <a href="javascript:;" class="btn delete" onclick="delete_by_id(<?=$board['id']?>)">删除</a>
-                                    </td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>

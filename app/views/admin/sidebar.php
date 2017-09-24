@@ -6,16 +6,16 @@
 					<span>后台管理</span>
 				</a>
 			</div>
+			<div class="nav-toggle">
+		        <a class="open active" href="#"><i class="iconfont icon-menu"></i></a>
+		        <a class="close" href="#"><i class="iconfont icon-close"></i></a>
+		    </div>
 			<div class="personInfo">
 				<div class="name">John欢迎您</div>
 				<div class="logout">
 					<a href="<?php echo base_url('common/logout') ?>" class="btn btn-logout" onClick="return confirm('确定退出？');">退出</a>
 				</div>
 			</div>
-			<!-- <div class="nav-toggle">
-		        <a class="open active" href="#"><i class="iconfont icon-menu"></i></a>
-		        <a class="close" href="#"><i class="iconfont icon-close"></i></a>
-		    </div> -->
 			<div class="menu">
 				<ul>
 					<li>
@@ -30,7 +30,7 @@
 						<div class="menu-title">申请管理</div>
 						<ul>
 							<li>
-								<a href="<?php echo base_url('admin/orderList') ?>" id="skip" class="menu-name"><i class="iconfont icon-link"></i>申请列表</a>
+								<a href="<?php echo base_url('admin/orderList') ?>" id="orderList" class="menu-name"><i class="iconfont icon-link"></i>申请列表</a>
 							</li>
 						</ul>
 					</li>
@@ -39,7 +39,7 @@
 						<div class="menu-title">留言管理</div>
 						<ul>
 							<li>
-								<a href="<?php echo base_url('board') ?>" id="skip" class="menu-name"><i class="iconfont icon-link"></i>留言板</a>
+								<a href="<?php echo base_url('board') ?>" id="board" class="menu-name"><i class="iconfont icon-link"></i>留言板</a>
 							</li>
 						</ul>
 					</li>
