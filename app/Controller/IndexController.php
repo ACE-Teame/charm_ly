@@ -37,10 +37,6 @@ class IndexController extends Home_Controller
         if(empty($data['address'])) {
             ajaxReturn(202, '请填写地址');
         }
-
-        // if(empty($data['contact'])) {
-        //     ajaxReturn(202, '请填写联系方式');
-        // }
     }
 
     /**
