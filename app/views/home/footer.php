@@ -2,16 +2,30 @@
     (function($){
 		$(function(){
 
-		    $('body').on('click','.home-menu', function(){
-		    	$('.slide-left').addClass('active');
-		    	$('.bg').addClass('active');
-		    	return false;
-		    });
-		    $('body').on('click','.bg', function(){
-		    	$('.slide-left').removeClass('active');
-		    	$('.bg').removeClass('active');
-		    	return false;		    	
-		    });
+		    
+		    if (screen.width <= 768){
+			    $('body').on('touchend','.home-menu', function(){
+			    	$('.slide-left').addClass('active');
+			    	$('.bg').addClass('active');
+			    	return false;
+			    });
+			    $('body').on('touchend','.bg', function(){
+			    	$('.slide-left').removeClass('active');
+			    	$('.bg').removeClass('active');
+			    	return false;		    	
+			    });
+			}else {
+			    $('body').on('click','.home-menu', function(){
+			    	$('.slide-left').addClass('active');
+			    	$('.bg').addClass('active');
+			    	return false;
+			    });
+			    $('body').on('click','.bg', function(){
+			    	$('.slide-left').removeClass('active');
+			    	$('.bg').removeClass('active');
+			    	return false;		    	
+			    });
+			}
 
 		    var str = window.location.pathname;
             var positions = new Array();
