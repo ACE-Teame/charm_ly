@@ -23,9 +23,18 @@ class BoardController extends Wb_Controller
      */
     public function _getSearch()
     {
-        if(get('name')) {
-            $where['name[~]'] = get('name');
+        if(get('username')) {
+            $where['username[~]'] = get('username');
         }
+
+        if(get('email')) {
+            $where['email[~]'] = get('email');
+        }
+        
+        if(get('phone')) {
+            $where['phone[~]'] = get('phone');
+        }
+
         if(get('start_date') && get('end_date')) {
             $where['time[<>]'] = [strtotime(get('start_date')), strtotime(get('end_date'))];
         } else {

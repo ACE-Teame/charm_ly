@@ -33,6 +33,18 @@ class AdminController extends Wb_Controller
             $where['username[~]'] = get('username');
         }
         
+        if(get('address')) {
+            $where['address[~]'] = get('address');
+        }
+
+        if(get('phone')) {
+            $where['phone[~]'] = get('phone');
+        }
+
+        if(get('contact')) {
+            $where['contact[~]'] = get('contact');
+        }
+
         if(get('start_date') && get('end_date')) {
             $where['time[<>]'] = [strtotime(get('start_date')), strtotime(get('end_date'))];
         } else {
