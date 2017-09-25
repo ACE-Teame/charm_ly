@@ -15,7 +15,7 @@ class IndexController extends Home_Controller
 
 	public function index()
 	{
-		view('home/index', $data);
+		view('home/index', ['c' => get('c')]);
 	}
 
     /**
@@ -46,7 +46,7 @@ class IndexController extends Home_Controller
     {
         $postData = post();
         $this->_ckeckData($postData);
-
+        
         $postData['time'] = time();
         $postData['ip']   = getIp();
 

@@ -37,6 +37,10 @@ class AdminController extends Wb_Controller
             $where['address[~]'] = get('address');
         }
 
+        if(get('c') || get('c') == 0) {
+            $where['c[~]'] = get('c');
+        }
+
         if(get('phone')) {
             $where['phone[~]'] = get('phone');
         }
@@ -128,10 +132,10 @@ class AdminController extends Wb_Controller
             $where = $this->_getOrderSearch();
         }
         $orderData  = parent::$model->select('contect', '*', $where);
-        echo "\xEF\xBB\xBF用户名,电话,微信/QQ,地址,提交时间\r";
+        echo "\xEF\xBB\xBF子链接,用户名,电话,微信/QQ,地址,提交时间\r";
         ob_end_flush();  
         foreach($orderData as $order) {  
-            echo $order['username'] . "," . "\"\t". $order['phone'] . "\",\"\t" . $order['contact'] . "\",\"\t" . $order['address'] ."\",\"\t" .  get_date($order['time']). "\"\t\r";  
+            echo $order['c'] . "," . "\"\t" . $order['username'] . "\",\"\t" . $order['phone'] . "\",\"\t" . $order['contact'] . "\",\"\t" . $order['address'] ."\",\"\t" .  get_date($order['time']). "\"\t\r";  
             flush();  
         }  
     }

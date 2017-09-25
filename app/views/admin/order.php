@@ -33,6 +33,10 @@
                         <label>时间段:</label>
                         <input type="text" name="start_date" id="start_date" placeholder="" onclick="WdatePicker()"> - 
                         <input type="text" name="end_date" id="end_date" placeholder="" onclick="WdatePicker()">
+                    </div>
+                    <div class="entry">
+                        <label>子链接:</label>
+                        <input type="text" name="c" placeholder="">
                     </div>    
                 </form>
             </div>
@@ -43,6 +47,7 @@
                             <tr>
                                 <th><input type="checkbox" name="" id="chkall"></th>
                                 <th>序号</th>
+                                <th>子链接</th>
                                 <th>用户名</th>
                                 <th>手机号</th>
                                 <th>地址</th>
@@ -56,6 +61,7 @@
                                 <tr>
                                     <td><input type="checkbox" class="chk" name="order[]" value="<?php echo $order['id'] ?>"</td>
                                     <td><?php echo $number++ ?></td>
+                                    <td><?php echo $order['c'] ?></td>
                                     <td><?php echo $order['username'] ?></td>
                                     <td><?php echo $order['phone'] ?></td>
                                     <td><?php echo $order['address'] ?></td>

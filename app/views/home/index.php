@@ -26,7 +26,7 @@
 						<div class="entry">
 							<input type="text" id="contact" name="contact" placeholder="微信/QQ">
 						</div>
-
+						<input type="hidden" name="c" value="<?php echo $c ?>">
 					</form>
 					<a class="btn" href="javascript:;" id="submit_contect">提交</a>
 				</div>
