@@ -29,7 +29,7 @@ class CommonController extends Controller
 						'ip'         => getIp()
 					], ['id' => $userInfo['id']]);
 				$_SESSION['uid']  = $userInfo['id'];
-				$_SESSION['name'] = trim(post('name'));
+				$_SESSION['name'] = trim(post('username'));
 				$_SESSION['menu'] = '';
 				redirect('admin');
 			}else{
